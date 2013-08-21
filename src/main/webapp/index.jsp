@@ -23,7 +23,7 @@
 
 <body>
 <h1>Mosaic Generator</h1>
-<p>This is where the mosaic generator will live</p>
+<p>Generating mosaic for ${param.img}</p>
 <img src="tmp/test.png">
 <img src="mosaic?${param.img}">
 

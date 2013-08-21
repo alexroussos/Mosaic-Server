@@ -54,13 +54,13 @@ public class MosaicServlet extends HttpServlet {
         
         
         
-        File outputFile = new File("test.png");
-//        outputFile.mkdirs();
+        File outputFile = new File("tmp", "test.png");
+        outputFile.mkdirs();
         ImageIO.write(mosaic, ".png", outputFile);
         
+        String message = "Wrote file to " + outputFile.getAbsolutePath();
         
-        
-        out.write("Hello Heroku".getBytes());
+        out.write(message.getBytes());
         out.flush();
         out.close();
     }

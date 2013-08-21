@@ -23,7 +23,7 @@
     <url-pattern>/generate-mosaic</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>hello</servlet-name>
+    <servlet-name>generate-mosaic</servlet-name>
     <servlet-class>mosaic.MosaicServlet</servlet-class>
   </servlet>
 

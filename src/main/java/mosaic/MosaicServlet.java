@@ -37,8 +37,7 @@ public class MosaicServlet extends HttpServlet {
 	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        ServletOutputStream out = resp.getOutputStream();
-        String imgUrl = "https://dl.dropboxusercontent.com/u/65411942/IMG_1913.JPG";
+        String imgUrl = req.getParameter("img");
         MosaicGenerator mosaicGenerator = new MosaicGenerator();
         BufferedImage rawImage = ImageIO.read(new URL(imgUrl));
 
@@ -46,24 +45,7 @@ public class MosaicServlet extends HttpServlet {
         List<Integer> widths = new ArrayList<Integer>(Arrays.asList(new Integer[] { 50, 100, 200 }));
         
         BufferedImage mosaic = mosaicGenerator.generateCompositeMosaic(rawImage, colorCounts, widths, new ImageBasedColorPaletteGenerator(rawImage));
-        
-        
-        // TODO better way to write from servlet - http://www.coderanch.com/t/483402/JSP/java/Display-image-JSP-byte
-        ByteArrayOutputStream os = new ByteArrayOutputStream();
-        ImageIO.write(mosaic, "png", os);
-        
-        
-        
-//        File outputFile = new File("tmp", "test.png");
-//        outputFile.mkdirs();
-//        ImageIO.write(mosaic, ".png", outputFile);
-//        
-//        String message = "Wrote file to " + outputFile.getAbsolutePath();
-//                
-//        out.write(message.getBytes());
-//        out.flush();
-//        out.close();
-        
+
         // http://stackoverflow.com/questions/1154254/help-getting-image-from-servlet-to-jsp-page
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ImageIO.write(mosaic, "png", baos);
@@ -72,7 +54,6 @@ public class MosaicServlet extends HttpServlet {
         baos.close();
         resp.setContentType("image/png");
         resp.setContentLength(imageBytes.length);
-
         resp.getOutputStream().write(imageBytes);
     }
 	

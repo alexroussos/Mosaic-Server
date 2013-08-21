@@ -25,7 +25,7 @@
 <h1>Mosaic Generator</h1>
 <p>This is where the mosaic generator will live</p>
 <img src="tmp/test.png">
-<img src="mosaic">
+<img src="mosaic?${param.img}">
 
 <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>

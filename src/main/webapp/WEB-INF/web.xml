@@ -13,11 +13,18 @@
     <servlet-name>hello</servlet-name>
     <servlet-class>com.example.HelloServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>generate-mosaic</servlet-name>
+    <url-pattern>/generate-mosaic</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>mosaic.MosaicServlet</servlet-class>
+  </servlet>
 
 </web-app>

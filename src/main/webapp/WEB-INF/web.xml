@@ -18,13 +18,13 @@
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
 
-<!--   <servlet-mapping>
-    <servlet-name>generate-mosaic</servlet-name>
-    <url-pattern>/generate-mosaic</url-pattern>
-  </servlet-mapping>
   <servlet>
-    <servlet-name>generate-mosaic</servlet-name>
+    <servlet-name>mosaic</servlet-name>
     <servlet-class>mosaic.MosaicServlet</servlet-class>
-  </servlet> -->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mosaic</servlet-name>
+    <url-pattern>/mosaic</url-pattern>
+  </servlet-mapping>
 
 </web-app>

@@ -38,6 +38,9 @@ public class MosaicServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         String imgUrl = req.getParameter("img");
+        
+        System.out.println("Got image " + imgUrl);
+        
         MosaicGenerator mosaicGenerator = new MosaicGenerator();
         BufferedImage rawImage = ImageIO.read(new URL(imgUrl));
 

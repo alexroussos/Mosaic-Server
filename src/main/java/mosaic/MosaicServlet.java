@@ -54,15 +54,26 @@ public class MosaicServlet extends HttpServlet {
         
         
         
-        File outputFile = new File("tmp", "test.png");
-        outputFile.mkdirs();
-        ImageIO.write(mosaic, ".png", outputFile);
+//        File outputFile = new File("tmp", "test.png");
+//        outputFile.mkdirs();
+//        ImageIO.write(mosaic, ".png", outputFile);
+//        
+//        String message = "Wrote file to " + outputFile.getAbsolutePath();
+//                
+//        out.write(message.getBytes());
+//        out.flush();
+//        out.close();
         
-        String message = "Wrote file to " + outputFile.getAbsolutePath();
-        
-        out.write(message.getBytes());
-        out.flush();
-        out.close();
+        // http://stackoverflow.com/questions/1154254/help-getting-image-from-servlet-to-jsp-page
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ImageIO.write(mosaic, "png", baos);
+        baos.flush();
+        byte[] imageBytes = baos.toByteArray();
+        baos.close();
+        resp.setContentType("image/png");
+        resp.setContentLength(imageBytes.length);
+
+        resp.getOutputStream().write(imageBytes);
     }
 	
     public void displayImage(HttpServletResponse resp) throws Exception {

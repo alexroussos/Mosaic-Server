@@ -93,15 +93,14 @@
           </div>
           
           <div class="form-actions">
-            <input class="btn btn-primary" type="submit" name="submit">
+            <input class="btn btn-primary" type="submit" name="submit" form="options">
             <input class="btn" type="reset">
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" name="submit" form="options"></button>
+            <button class="btn" type="reset"></button>
           </div>
         </fieldset>
-          
-          <div class="form-actions">
-            <input class="btn btn-primary" type="submit" name="submit2">
-            <input class="btn" type="reset">
-          </div>
 </form>
             
 

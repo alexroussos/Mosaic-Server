@@ -29,7 +29,7 @@ public class HomeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("HomeServlet: got POST with " + req.getParameterNames());
 		req.setAttribute("showImg", "true");
-		req.getRequestDispatcher("/index.jsp" + "?" + req.getQueryString()).forward(req, resp);
+		req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 	
 }

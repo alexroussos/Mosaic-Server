@@ -53,44 +53,44 @@
           <div class="control-group">
             <label class="control-label" for="imgInput">Image URL</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="imgUrl" name="imgUrl">
+              <input type="text" class="input-xlarge" id="imgUrl" name="imgUrl" value="${param.imgUrl}">
             </div>
           </div>
           
           <div class="control-group">
             <label class="control-label" for="fileInput">Or upload an image</label>
             <div class="controls">
-              <input class="input-file" id="fileInput" type="file" name="imgFile">
+              <input class="input-file" id="fileInput" type="file" name="imgFile" value="${param.imgFile}">
             </div>
           </div>
 		  <!-- 
           <label class="control-label" for="dimTypes">Choose dimension to use</label> -->
           <div id="dimTypes">
 		    <label class="radio">
-	          <input type="radio" name="dimType" id="dimTypeW" value="width" checked>
+	          <input type="radio" name="dimType" id="dimTypeW" value="${empty param.dimType ? 'width' : param.dimType}" checked>
 		      Width
 		    </label>
 		    <label class="radio">
-		      <input type="radio" name="dimType" id="dimTypeH" value="height">
+		      <input type="radio" name="dimType" id="dimTypeH" value="${empty param.dimType ? 'height' : param.dimType}">
               Height		  
             </label>
           </div>
           
           <div class="input-append">
           	<label class="control-label" for="dimensions">Number of units wide or tall to use in each variation</label>
-		    <input class="span2" id="dimensions" type="text" placeholder="50,100,200" name="dims">
+		    <input class="span2" id="dimensions" type="text" placeholder="50,100,200" name="dims"  value="${param.dims}">
 	      </div>
 	      
           <div class="input-append">
           	<label class="control-label" for="colors">Number of colors to use in each variation</label>
-		    <input class="span2" id="colors" type="text" placeholder="4,8,16" name="colors">
+		    <input class="span2" id="colors" type="text" placeholder="4,8,16" name="colors" value="${param.colors}">
 	      </div>    
           
           <div class="control-group">
             <label class="control-label" for="showDimensions"></label>
             <div class="controls">
               <label class="checkbox">
-                <input type="checkbox" id="showDimensions" value="true" name="showDims">
+                <input type="checkbox" id="showDimensions" value="true" name="showDims" value="${param.showDims}">
 				Show dimensions on mosaic
               </label>
             </div>
@@ -101,30 +101,6 @@
             <input class="btn" type="reset">
           </div>
 </form>
-            
-
-<!-- <form action="html_form_action.asp" method="get">
-  <label>Image URL:</label>
-  <input type="text" id="imgUrl2" name="imgUrl" placeholder="http://www.website.com/myImage.png" required>
-  
-  <label>Or upload a file:</label>
-  <input id="imgFile" type="file" name="imgFile">
-  
-  <label for="dimensions">Enter the number of units wide or tall to use in each variation</label>
-  <input id="dimensions2" type="text" placeholder="50,100,200" name="dims">
-  
-  <label>Dimension to use:</label>
-  <input type="radio" id="dimTypeW2" name="dimType" value="width">Width
-  <input type="radio" id="dimTypeH2" name="dimType" value="height">Height
-  
-  <label>Show dimensions on result:</label>
-  <input type="checkbox" id="showDim2" name="showDim">
-  
-  <label for="colors">Enter the number of colors to use in each variation</label>
-  <input id="colors2" type="text" placeholder="4,8,16" name="colors">
-  
-  <input type="submit" value="Submit" /> 
-</form> -->
 
 <%-- TODO set width both for very small and very large --%>
 <%-- TODO better way to forward params --%>

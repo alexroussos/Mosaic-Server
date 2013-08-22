@@ -122,15 +122,15 @@
 </form> -->
 
 <c:if test="${requestScope.showImg == true}">
-	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations 1">
+	<img src="mosaic?imgUrl=${param.imgUrl}" alt="Composite image of mosaics based on color/resolution variations 1">
 </c:if>
 
 <c:if test="${props['showImg']} == true">
-	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations 2">
+	<img src="mosaic?imgUrl=${param.imgUrl}" alt="Composite image of mosaics based on color/resolution variations 2">
 </c:if>
 
 <c:if test="${config['showImg']} == true">
-	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations 3">
+	<img src="mosaic?imgUrl=${param.imgUrl}" alt="Composite image of mosaics based on color/resolution variations 3">
 </c:if>
 
 <%-- <%= config.("showImg")%> --%>

@@ -16,8 +16,9 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   <style type="text/css">
-    .instructions {
-      display: none;
+  <%-- TODO container --%>
+    .form-horizontal {
+      margin-left: 50px;
     }
   </style>
   
@@ -30,8 +31,6 @@
 
 <body>
 <h1>Mosaic Generator</h1>
-<p>Generating mosaic for ${param.img}</p>
-<img src="mosaic?img=${param.img}">
 
 
 
@@ -48,15 +47,12 @@
             </div>
           </div>
           
-<!-- 		  <div class="control-group" data-toggle="buttons-checkbox">
-            <label class="control-label" for="optionsRadios">Choose dimension to use</label>
+          <div class="control-group">
+            <label class="control-label" for="fileInput">Or upload an image.</label>
             <div class="controls">
-              <label class="radio">
-				  <input type="radio" class="btn" value="width">Width
-				  <input type="radio" class="btn" value="height">Height
-			  </label>
-			</div>
-		  </div> -->
+              <input class="input-file" id="fileInput" type="file">
+            </div>
+          </div>
 		  
           <label class="control-label" for="dimensionType">Choose dimension to use</label>
 		  <label class="radio">
@@ -67,75 +63,39 @@
 		    <input type="radio" name="dimensionType" id="dimensionTypeHeight" value="height">
             Height		  
           </label>
-		  <!-- 
-		  <div class="btn-group" data-toggle-name="is_private" data-toggle="buttons-radio" >
-		    <button type="button" value="0" class="btn" data-toggle="button">Public</button>
-		    <button type="button" value="1" class="btn" data-toggle="button">Private</button>
-		  </div>
-		  <input type="hidden" name="is_private" value="0" />
-           -->
+          
+          <div class="input-append">
+          	<label class="control-label" for="dimensions">Enter the number of units wide or tall to use in each variation.</label>
+		    <input class="span2" id="dimensions" type="text" placeholder="50,100,200">
+	      </div>
+	      
+          <div class="input-append">
+          	<label class="control-label" for="colors">Enter the number of colors to use in each variation.</label>
+		    <input class="span2" id="colors" type="text" placeholder="4,8,16">
+	      </div>      
+          
+          
           <div class="control-group">
-            <label class="control-label" for="optionsCheckbox">Check for stuff to happen	</label>
+            <label class="control-label" for="optionsCheckbox"></label>
             <div class="controls">
               <label class="checkbox">
                 <input type="checkbox" id="optionsCheckbox" value="option1">
-				Something about stuff.
+				Show dimensions on mosaic
               </label>
             </div>
           </div>
           
-<!--           <div class="control-group">
-            <label class="control-label" for="select01">Select list</label>
-            <div class="controls">
-              <select id="select01">
-                <option>something</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>	
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="multiSelect">Multicon-select</label>
-            <div class="controls">
-              <select multiple="multiple" id="multiSelect">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div> -->
           
-          <div class="input-append">
-		    <input class="span2" id="appendedInputButton" type="text">
-		    <button class="btn" type="button">Go!</button>
-	      </div>
-          
-          
-          
-          <div class="control-group">
-            <label class="control-label" for="fileInput">File input</label>
-            <div class="controls">
-              <input class="input-file" id="fileInput" type="file">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="textarea">Textarea</label>
-            <div class="controls">
-              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
-            </div>
-          </div>
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
             <button class="btn">Cancel</button>
           </div>
         </fieldset>
 </form>
             
 
+<p>Generating mosaic for ${param.img}</p>
+<img src="mosaic?img=${param.img}">
 
 
 

@@ -67,11 +67,11 @@
           
           <div id="dimTypes">
 		    <label class="radio">
-	          <input type="radio" name="dimType" id="dimTypeW" value="${empty param.dimType ? 'width' : param.dimType}" checked>
+	          <input type="radio" name="dimType" id="dimTypeW" value="width" checked=${empty param.dimType ? 'checked' : (param.dimType == 'width' ? 'checked' : '')}>
 		      Width
 		    </label>
 		    <label class="radio">
-		      <input type="radio" name="dimType" id="dimTypeH" value="${empty param.dimType ? 'height' : param.dimType}">
+		      <input type="radio" name="dimType" id="dimTypeH" value="height" checked=${param.dimType == 'height' ? 'checked' : ''}>
               Height		  
             </label>
           </div>

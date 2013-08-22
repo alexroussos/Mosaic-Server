@@ -44,9 +44,20 @@ public class MosaicServlet extends HttpServlet {
         
         MosaicGenerator mosaicGenerator = new MosaicGenerator();
         BufferedImage rawImage = ImageIO.read(new URL(imgUrl));
-
+        
         List<Integer> colorCounts = new ArrayList<Integer>(Arrays.asList(new Integer[] { 6, 12, 24 }));
         List<Integer> widths = new ArrayList<Integer>(Arrays.asList(new Integer[] { 50, 100, 200 }));
+        
+        
+        // Override if param was provided
+        String c = req.getParameter("colors");
+        if (c != null) {
+        	colorCounts = getArgAsList(c);
+        }
+        String d = req.getParameter("dims");
+        if (d != null) {
+        	widths = getArgAsList(d);
+        }
         
         BufferedImage mosaic = mosaicGenerator.generateCompositeMosaic(rawImage, colorCounts, widths, new ImageBasedColorPaletteGenerator(rawImage));
 
@@ -87,6 +98,13 @@ public class MosaicServlet extends HttpServlet {
         while ((count = in.read(buf)) >= 0) {
           out.write(buf, 0, count);
         }  
-      
       }
+    
+    private static List<Integer> getArgAsList(String args) {
+    	List<Integer> list = new ArrayList<Integer>();
+    	for (String arg : args.split(",")) {
+    		list.add(Integer.parseInt(arg.trim()));
+    	}
+    	return list;
+    }
 }

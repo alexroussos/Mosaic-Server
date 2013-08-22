@@ -27,6 +27,10 @@
     .form-horizontal {
       margin-left: 50px;
     }
+    
+    #mosaic {
+      margin: 50 px
+    }
   </style>
   
   <script type="text/javascript">
@@ -40,7 +44,7 @@
 <h1>Mosaic Generator</h1>
 
 
-
+<%-- TODO support choosing palette generator, loading palette from file --%>
 <%--TODO option to disable printing dimensions --%>
 <%-- TODO probably submit to self but as post --%>
 <form class="form-horizontal" method="post" action="home" id="options">
@@ -122,15 +126,7 @@
 </form> -->
 
 <c:if test="${requestScope.showImg == true}">
-	<img src="mosaic?imgUrl=${param.imgUrl}" alt="Composite image of mosaics based on color/resolution variations 1">
-</c:if>
-
-<c:if test="${props['showImg']} == true">
-	<img src="mosaic?imgUrl=${param.imgUrl}" alt="Composite image of mosaics based on color/resolution variations 2">
-</c:if>
-
-<c:if test="${config['showImg']} == true">
-	<img src="mosaic?imgUrl=${param.imgUrl}" alt="Composite image of mosaics based on color/resolution variations 3">
+	<img src="mosaic?imgUrl=${param.imgUrl}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">
 </c:if>
 
 <%-- <%= config.("showImg")%> --%>

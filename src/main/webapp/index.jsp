@@ -122,8 +122,18 @@
 </form> -->
 
 <c:if test="${requestScope.showImg == true}">
-	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations">
+	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations 1">
 </c:if>
+
+<c:if test="${props['showImg']} == true">
+	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations 2">
+</c:if>
+
+<c:if test="${config['showImg']} == true">
+	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations 3">
+</c:if>
+
+<%-- <%= config.("showImg")%> --%>
 
 <!-- 
 <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>

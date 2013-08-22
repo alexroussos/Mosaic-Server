@@ -121,7 +121,7 @@
   <input type="submit" value="Submit" /> 
 </form> -->
 
-<c:if test=${requestScope.showImg == true}>
+<c:if test="${requestScope.showImg == true}">
 	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations">
 </c:if>
 

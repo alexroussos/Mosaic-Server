@@ -60,11 +60,11 @@
           <div class="control-group">
             <label class="control-label" for="fileInput">Or upload an image</label>
             <div class="controls">
-              <input class="input-file" id="fileInput" type="file" name="imgFile" value="${param.imgFile}">
+            	<%--TODO need somewhere to upload to --%>
+              <input class="input-file" id="fileInput" type="file" name="imgFile" value="${param.imgFile}" accept="image/*">
             </div>
           </div>
-		  <!-- 
-          <label class="control-label" for="dimTypes">Choose dimension to use</label> -->
+          
           <div id="dimTypes">
 		    <label class="radio">
 	          <input type="radio" name="dimType" id="dimTypeW" value="${empty param.dimType ? 'width' : param.dimType}" checked>
@@ -90,7 +90,7 @@
             <label class="control-label" for="showDimensions"></label>
             <div class="controls">
               <label class="checkbox">
-                <input type="checkbox" id="showDimensions" value="true" name="showDims" value="${param.showDims}">
+                <input type="checkbox" id="showDimensions" value="true" name="showDims" value="${empty param.showDims ? true : param.showDims}">
 				Show dimensions on mosaic
               </label>
             </div>

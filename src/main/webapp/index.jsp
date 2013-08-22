@@ -59,8 +59,8 @@
               <input class="input-file" id="fileInput" type="file">
             </div>
           </div>
-		  
-          <label class="control-label" for="dimTypes">Choose dimension to use</label>
+		  <!-- 
+          <label class="control-label" for="dimTypes">Choose dimension to use</label> -->
           <div id="dimTypes">
 		    <label class="radio">
 	          <input type="radio" name="dimType" id="dimTypeW" value="width" checked>
@@ -93,12 +93,8 @@
           </div>
           
           <div class="form-actions">
-            <input class="btn btn-primary" type="submit" name="submit" form="options">
+            <input class="btn btn-primary" type="submit" form="options">
             <input class="btn" type="reset">
-          </div>
-          <div class="form-actions">
-            <button class="btn btn-primary" type="submit" name="submit" form="options"></button>
-            <button class="btn" type="reset"></button>
           </div>
         </fieldset>
 </form>

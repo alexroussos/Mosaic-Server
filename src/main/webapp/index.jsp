@@ -46,7 +46,7 @@
           <div class="control-group">
             <label class="control-label" for="imgInput">Image URL</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="imgInput">
+              <input type="text" class="input-xlarge" id="imgUrl" name="imgUrl">
               <p class="help-block">Enter the URL of the image to turn into a mosaic</p>
             </div>
           </div>
@@ -54,7 +54,7 @@
           <div class="control-group">
             <label class="control-label" for="fileInput">Or upload an image</label>
             <div class="controls">
-              <input class="input-file" id="fileInput" type="file">
+              <input class="input-file" id="fileInput" type="file" name="imgFile">
             </div>
           </div>
 		  <!-- 
@@ -72,19 +72,19 @@
           
           <div class="input-append">
           	<label class="control-label" for="dimensions">Enter the number of units wide or tall to use in each variation</label>
-		    <input class="span2" id="dimensions" type="text" placeholder="50,100,200">
+		    <input class="span2" id="dimensions" type="text" placeholder="50,100,200" name="dims">
 	      </div>
 	      
           <div class="input-append">
           	<label class="control-label" for="colors">Enter the number of colors to use in each variation</label>
-		    <input class="span2" id="colors" type="text" placeholder="4,8,16">
+		    <input class="span2" id="colors" type="text" placeholder="4,8,16" name="colors">
 	      </div>    
           
           <div class="control-group">
             <label class="control-label" for="showDimensions"></label>
             <div class="controls">
               <label class="checkbox">
-                <input type="checkbox" id="showDimensions" value="true">
+                <input type="checkbox" id="showDimensions" value="true" name="showDims">
 				Show dimensions on mosaic
               </label>
             </div>
@@ -94,31 +94,29 @@
             <input class="btn btn-primary" type="submit" >
             <input class="btn" type="reset">
           </div>
-          
-            <input class="btn btn-primary" type="submit" >
 </form>
             
 
 <form action="html_form_action.asp" method="get">
-  <label for="dimensions">Enter the number of units wide or tall to use in each variation</label>
-  <input id="dimensions2" type="text" placeholder="50,100,200">
- 
-  <label for="colors">Enter the number of colors to use in each variation</label>
-  <input id="colors2" type="text" placeholder="4,8,16">
-
   <label>Image URL:</label>
-  <input type="text" id="imgUrl" name="imgUrl" placeholder="http://www.website.com/myImage.png" required>
+  <input type="text" id="imgUrl2" name="imgUrl" placeholder="http://www.website.com/myImage.png" required>
   
   <label>Or upload a file:</label>
-  <input id="imgFile" type="file">
+  <input id="imgFile" type="file" name="imgFile">
+  
+  <label for="dimensions">Enter the number of units wide or tall to use in each variation</label>
+  <input id="dimensions2" type="text" placeholder="50,100,200" name="dims">
   
   <label>Dimension to use:</label>
   <input type="radio" id="dimTypeW2" name="dimType" >Width
   <input type="radio" id="dimTypeH2" name="dimType" >Height
   
   <label>Show dimensions on result:</label>
-  <input type="checkbox" id="showDim2">
-
+  <input type="checkbox" id="showDim2" name="showDim">
+  
+  <label for="colors">Enter the number of colors to use in each variation</label>
+  <input id="colors2" type="text" placeholder="4,8,16" name="colors">
+  
   <input type="submit" value="Submit" /> 
 </form>
 
@@ -132,19 +130,6 @@
 
   <label>Repeat email address:</label>
   <input type="email" id="email_addr_repeat" name="email_addr_repeat" required oninput="check(this)">
-
-  <label>Arrival date:</label>
-  <input type="date" id="arrival_dt" name="arrival_dt" required>
-  
-  <label>Number of nights (rooms are $99.00 per night):</label>
-  <input type="number" id="nights" name="nights" value="1" min="1" max="30" required>
-
-  <label>Number of guests (each additional guest adds $10.00 per night):</label>
-  <input type="number" id="guests" name="guests" value="1" min="1" max="4" required>
-
-  <label>Estimated total:</label>
-  $<output id="total" name="total">99</output>.00
-  <br><br>
 
   <label>Promo code:</label>
   <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}" title="Promo codes consist of 6 alphanumeric characters.">
@@ -162,17 +147,6 @@ function check(input) {
   }
 }
 </script>
-
-
-
-<form action="/cgi-bin/hello_get.cgi" method="get">
-First name: 
-<input type="text" name="first_name" />
-<br>
-Last name: 
-<input type="text" name="last_name" />
-<input type="submit" value="submit" />
-</form>
  -->
 
 <img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations">

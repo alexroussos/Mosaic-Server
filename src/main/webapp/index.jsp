@@ -29,7 +29,7 @@
     }
     
     #mosaic {
-      margin: 50 px
+      margin: 50px
     }
   </style>
   
@@ -125,6 +125,7 @@
   <input type="submit" value="Submit" /> 
 </form> -->
 
+<%-- TODO set width both for very small and very large --%>
 <%-- TODO better way to forward params --%>
 <c:if test="${requestScope.showImg == true}">
 	<img src="mosaic?imgUrl=${param.imgUrl}&dims=${param.dims}&colors=${param.colors}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">

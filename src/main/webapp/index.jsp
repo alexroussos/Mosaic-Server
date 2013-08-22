@@ -43,7 +43,7 @@
 
 <%--TODO option to disable printing dimensions --%>
 <%-- TODO probably submit to self but as post --%>
-<form class="form-horizontal" method="post" action="" id="options">
+<form class="form-horizontal" method="post" action="home" id="options">
           <div class="control-group">
             <label class="control-label" for="imgInput">Image URL</label>
             <div class="controls">

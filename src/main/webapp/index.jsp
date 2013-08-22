@@ -7,6 +7,13 @@
 
   <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
   <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   <style type="text/css">
     .instructions {
@@ -32,7 +39,7 @@
 
 <form class="form-horizontal">
         <fieldset>
-          <legend>Controls Bootstrap supports</legend>
+          <legend>Mosaic Generator Options</legend>
           <div class="control-group">
             <label class="control-label" for="imgInput">Image URL</label>
             <div class="controls">
@@ -41,7 +48,7 @@
             </div>
           </div>
           
-		  <div class="control-group" data-toggle="buttons-checkbox">
+<!-- 		  <div class="control-group" data-toggle="buttons-checkbox">
             <label class="control-label" for="optionsRadios">Choose dimension to use</label>
             <div class="controls">
               <label class="radio">
@@ -49,34 +56,35 @@
 				  <input type="radio" class="btn" value="height">Height
 			  </label>
 			</div>
-		  </div>
+		  </div> -->
 		  
+          <label class="control-label" for="dimensionType">Choose dimension to use</label>
 		  <label class="radio">
-	        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-		    Option one is this and that - be sure to include why it's great
+	        <input type="radio" name="dimensionType" id="dimensionTypeWidth" value="width" checked>
+		    Width
 		  </label>
 		  <label class="radio">
-		    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-		    Option two can be something else and selecting it will deselect option one
-		  </label>
-		  
+		    <input type="radio" name="dimensionType" id="dimensionTypeHeight" value="height">
+            Height		  
+          </label>
+		  <!-- 
 		  <div class="btn-group" data-toggle-name="is_private" data-toggle="buttons-radio" >
 		    <button type="button" value="0" class="btn" data-toggle="button">Public</button>
 		    <button type="button" value="1" class="btn" data-toggle="button">Private</button>
 		  </div>
 		  <input type="hidden" name="is_private" value="0" />
-          
+           -->
           <div class="control-group">
-            <label class="control-label" for="optionsCheckbox">Specify</label>
+            <label class="control-label" for="optionsCheckbox">Check for stuff to happen	</label>
             <div class="controls">
               <label class="checkbox">
                 <input type="checkbox" id="optionsCheckbox" value="option1">
-                Are the dimensions you're specifying the desired length or width?
+				Something about stuff.
               </label>
             </div>
           </div>
           
-          <div class="control-group">
+<!--           <div class="control-group">
             <label class="control-label" for="select01">Select list</label>
             <div class="controls">
               <select id="select01">
@@ -86,7 +94,7 @@
                 <option>4</option>
                 <option>5</option>
               </select>
-            </div>
+            </div>	
           </div>
           <div class="control-group">
             <label class="control-label" for="multiSelect">Multicon-select</label>
@@ -99,7 +107,15 @@
                 <option>5</option>
               </select>
             </div>
-          </div>
+          </div> -->
+          
+          <div class="input-append">
+		    <input class="span2" id="appendedInputButton" type="text">
+		    <button class="btn" type="button">Go!</button>
+	      </div>
+          
+          
+          
           <div class="control-group">
             <label class="control-label" for="fileInput">File input</label>
             <div class="controls">

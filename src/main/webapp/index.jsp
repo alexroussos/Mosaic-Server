@@ -7,7 +7,7 @@
 
   <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
   <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
-  
+  <%--TODO proper includes --%>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <!-- Optional theme -->
@@ -35,8 +35,8 @@
 
 
 <%--TODO option to disable printing dimensions --%>
-
-<form class="form-horizontal">
+<%-- TODO probably submit to self but as post --%>
+<form class="form-horizontal" action="post" action="/submit">
         <fieldset>
           <legend>Mosaic Generator Options</legend>
           <div class="control-group">
@@ -72,33 +72,28 @@
           <div class="input-append">
           	<label class="control-label" for="colors">Enter the number of colors to use in each variation.</label>
 		    <input class="span2" id="colors" type="text" placeholder="4,8,16">
-	      </div>      
-          
+	      </div>    
           
           <div class="control-group">
-            <label class="control-label" for="optionsCheckbox"></label>
+            <label class="control-label" for="showDimensions"></label>
             <div class="controls">
               <label class="checkbox">
-                <input type="checkbox" id="optionsCheckbox" value="option1">
+                <input type="checkbox" id="showDimensions" value="true">
 				Show dimensions on mosaic
               </label>
             </div>
           </div>
           
-          
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button class="btn">Cancel</button>
+            <input class="btn btn-primary" type="submit">Submit	
+            <input class="btn" type="reset">Cancel
           </div>
         </fieldset>
 </form>
             
 
-<p>Generating mosaic for ${param.img}</p>
+
 <img src="mosaic?img=${param.img}">
-
-
-
 
 
 

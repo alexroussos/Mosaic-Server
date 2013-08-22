@@ -108,17 +108,17 @@
   <input id="imgFile" type="file">
   
   <label>Dimension to use:</label>
-  <input type="radio" id="dimTypeW" name="dimType" >Width
-  <input type="radio" id="dimTypeH" name="dimType" >Height
+  <input type="radio" id="dimTypeW2" name="dimType" >Width
+  <input type="radio" id="dimTypeH2" name="dimType" >Height
   
   <label>Show dimensions on result:</label>
-  <input type="checkbox" id="showDim">
+  <input type="checkbox" id="showDim2">
 
   <label for="dimensions">Enter the number of units wide or tall to use in each variation</label>
-  <input id="dimensions" type="text" placeholder="50,100,200">
+  <input id="dimensions2" type="text" placeholder="50,100,200">
  
   <label for="colors">Enter the number of colors to use in each variation</label>
-  <input id="colors" type="text" placeholder="4,8,16">
+  <input id="colors2" type="text" placeholder="4,8,16">
 
   <input type="submit" value="Submit" /> 
 </form>
@@ -158,7 +158,7 @@ function check(input) {
   if (input.value != document.getElementById('email_addr').value) {
     input.setCustomValidity('The two email addresses must match.');
   } else {
-    // input is valid -- reset the error message
+    // input is valid - reset the error message
     input.setCustomValidity('');
   }
 }

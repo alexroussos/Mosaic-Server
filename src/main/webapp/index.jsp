@@ -13,6 +13,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
 <!-- Latest compiled and minified JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   <style type="text/css">
@@ -36,7 +37,7 @@
 
 <%--TODO option to disable printing dimensions --%>
 <%-- TODO probably submit to self but as post --%>
-<form class="form-horizontal" method="post" action="getMosaic">
+<form class="form-horizontal" method="post" action="getMosaic" id="options">
         <fieldset>
           <legend>Mosaic Generator Options</legend>
           <div class="control-group">
@@ -54,13 +55,13 @@
             </div>
           </div>
 		  
-          <label class="control-label" for="dimensionType">Choose dimension to use</label>
+          <label class="control-label" for="dimType">Choose dimension to use</label>
 		  <label class="radio">
-	        <input type="radio" name="dimensionType" id="dimensionTypeWidth" value="width" checked>
+	        <input type="radio" name="dimType" id="dimTypeW" value="width" checked>
 		    Width
 		  </label>
 		  <label class="radio">
-		    <input type="radio" name="dimensionType" id="dimensionTypeHeight" value="height">
+		    <input type="radio" name="dimType" id="dimTypeH" value="height">
             Height		  
           </label>
           
@@ -83,9 +84,16 @@
               </label>
             </div>
           </div>
+          <!-- 
+          <script language="JavaScript">
+			function submitForm() {
+			  document.forms['options'].do.value = "checkstatus";
+			  document.forms['options'].submit();
+			}
+	      </script> -->
           
           <div class="form-actions">
-            <input class="btn btn-primary" type="submit">	
+            <input class="btn btn-primary" type="submit"><!--  onClick="submitForm();"> -->	
             <input class="btn" type="reset">
           </div>
         </fieldset>

@@ -125,8 +125,9 @@
   <input type="submit" value="Submit" /> 
 </form> -->
 
+<%-- TODO better way to forward params --%>
 <c:if test="${requestScope.showImg == true}">
-	<img src="mosaic?imgUrl=${param.imgUrl}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">
+	<img src="mosaic?imgUrl=${param.imgUrl}&dims=${param.dims}&colors=${param.colors}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">
 </c:if>
 
 <%-- <%= config.("showImg")%> --%>

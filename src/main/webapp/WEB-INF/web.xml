@@ -13,8 +13,7 @@
 
   <servlet>
     <servlet-name>home</servlet-name>
-    <!-- <servlet-class>mosaic.HomeServlet</servlet-class> -->
-    <jsp-file>index.jsp</jsp-file>
+    <servlet-class>mosaic.HomeServlet</servlet-class>
     <init-param>
 	  <param-name>showImg</param-name>
 	  <param-value>true</param-value>

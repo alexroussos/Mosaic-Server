@@ -29,6 +29,7 @@ public class HomeServlet extends HttpServlet {
 		System.out.println("HomeServlet: got POST with " + req.getParameterNames());
 		// TODO include mosaic image
 		req.setAttribute("showImg", "true");
+		req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 	
 }

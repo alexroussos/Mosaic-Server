@@ -90,8 +90,8 @@
             <label class="control-label" for="showDimensions"></label>
             <div class="controls">
               <label class="checkbox">
-                <input type="checkbox" id="showDimensions" value="true" name="showDims" checked="${empty param.showDims ? 'checked' : param.showDims}">
-				Show dimensions on mosaic
+                <input type="checkbox" id="showDimensions" value="true" name="showDims" ${empty param.showDims ? '' : 'checked'}>
+				No dimension labels on mosaic
               </label>
             </div>
           </div>

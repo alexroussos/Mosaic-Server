@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <title>Mosaic Generator</title>
 
-  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
   <%--TODO proper includes - per http://getbootstrap.com/getting-started/#template--%>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -104,9 +102,9 @@
 <img src="mosaic?img=${param.img}">
 
 
-
+<!-- 
 <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script> -->
 </body>
 </html>

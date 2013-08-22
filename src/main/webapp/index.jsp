@@ -13,7 +13,14 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
 
+
+<%-- TODO try this http://www.w3resource.com/twitter-bootstrap/example-horizontal-form-with-twitter-bootstrap.html --%>
+<%-- TODO fix encoding in headers http://stackoverflow.com/questions/10158743/how-do-i-change-the-actual-encoding-of-my-html-document --%>
+ 
+ 
+ 
   <style type="text/css">
   <%-- TODO container --%>
     .form-horizontal {
@@ -53,15 +60,17 @@
             </div>
           </div>
 		  
-          <label class="control-label" for="dimType">Choose dimension to use</label>
-		  <label class="radio">
-	        <input type="radio" name="dimType" id="dimTypeW" value="width" checked>
-		    Width
-		  </label>
-		  <label class="radio">
-		    <input type="radio" name="dimType" id="dimTypeH" value="height">
-            Height		  
-          </label>
+          <label class="control-label" for="dimTypes">Choose dimension to use</label>
+          <div id="dimTypes">
+		    <label class="radio">
+	          <input type="radio" name="dimType" id="dimTypeW" value="width" checked>
+		      Width
+		    </label>
+		    <label class="radio">
+		      <input type="radio" name="dimType" id="dimTypeH" value="height">
+              Height		  
+            </label>
+          </div>
           
           <div class="input-append">
           	<label class="control-label" for="dimensions">Enter the number of units wide or tall to use in each variation</label>
@@ -83,23 +92,21 @@
             </div>
           </div>
           
-          <script language="JavaScript">
-			function submitForm() {
-			  document.forms['options'].do.value = "checkstatus";
-			  document.forms['options'].submit();
-			}
-	      </script>
-          
           <div class="form-actions">
-            <input class="btn btn-primary" type="submit" onClick="submitForm();">
+            <input class="btn btn-primary" type="submit" name="submit">
             <input class="btn" type="reset">
           </div>
         </fieldset>
+          
+          <div class="form-actions">
+            <input class="btn btn-primary" type="submit" name="submit2">
+            <input class="btn" type="reset">
+          </div>
 </form>
             
 
 
-<img src="mosaic?img=${param.img}">
+<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations">
 
 
 <!-- 

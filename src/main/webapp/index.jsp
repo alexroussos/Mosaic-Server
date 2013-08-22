@@ -43,8 +43,6 @@
 <%--TODO option to disable printing dimensions --%>
 <%-- TODO probably submit to self but as post --%>
 <form class="form-horizontal" method="post" action="getMosaic" id="options">
-        <fieldset>
-          <legend>Mosaic Generator Options</legend>
           <div class="control-group">
             <label class="control-label" for="imgInput">Image URL</label>
             <div class="controls">
@@ -93,16 +91,13 @@
           </div>
           
           <div class="form-actions">
-            <input class="btn btn-primary" type="submit" form="options">
+            <input class="btn btn-primary" type="submit" >
             <input class="btn" type="reset">
           </div>
-        </fieldset>
+          
+            <input class="btn btn-primary" type="submit" >
 </form>
             
-            <input type="text" id="part" name="part" required pattern="[A-Z]{3}[0-9]{4}"
-       title="Part numbers consist of 3 uppercase letters followed by 4 digits."/>
-<input type="submit" formnovalidate value="Save">
-<input type="submit" value="Submit">
 
 <form oninput="total.value = (nights.valueAsNumber * 99) + 
  ((guests.valueAsNumber - 1) * 10)">

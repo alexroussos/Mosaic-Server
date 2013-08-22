@@ -54,7 +54,6 @@
             <label class="control-label" for="imgInput">Image URL</label>
             <div class="controls">
               <input type="text" class="input-xlarge" id="imgUrl" name="imgUrl">
-              <p class="help-block">Enter the URL of the image to turn into a mosaic</p>
             </div>
           </div>
           
@@ -78,12 +77,12 @@
           </div>
           
           <div class="input-append">
-          	<label class="control-label" for="dimensions">Enter the number of units wide or tall to use in each variation</label>
+          	<label class="control-label" for="dimensions">Number of units wide or tall to use in each variation</label>
 		    <input class="span2" id="dimensions" type="text" placeholder="50,100,200" name="dims">
 	      </div>
 	      
           <div class="input-append">
-          	<label class="control-label" for="colors">Enter the number of colors to use in each variation</label>
+          	<label class="control-label" for="colors">Number of colors to use in each variation</label>
 		    <input class="span2" id="colors" type="text" placeholder="4,8,16" name="colors">
 	      </div>    
           

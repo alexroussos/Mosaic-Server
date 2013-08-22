@@ -99,8 +99,31 @@
 </form>
             
 
-<form oninput="total.value = (nights.valueAsNumber * 99) + 
- ((guests.valueAsNumber - 1) * 10)">
+<form action="html_form_action.asp" method="get">
+
+  <label>Image URL:</label>
+  <input type="text" id="imgUrl" name="imgUrl" placeholder="http://www.website.com/myImage.png" required>
+  
+  <label>Or upload a file:</label>
+  <input id="imgFile" type="file">
+  
+  <label>Dimension to use:</label>
+  <input type="radio" id="dimTypeW" name="dimType" >Width
+  <input type="radio" id="dimTypeH" name="dimType" >Height
+  
+  <label>Show dimensions on result:</label>
+  <input type="checkbox" id="showDim">
+
+  <label for="dimensions">Enter the number of units wide or tall to use in each variation</label>
+  <input id="dimensions" type="text" placeholder="50,100,200">
+ 
+  <label for="colors">Enter the number of colors to use in each variation</label>
+  <input id="colors" type="text" placeholder="4,8,16">
+
+  <input type="submit" value="Submit" /> 
+</form>
+
+<!-- <form oninput="total.value = (nights.valueAsNumber * 99) + ((guests.valueAsNumber - 1) * 10)">
 
   <label>Full name:</label>
   <input type="text" id="full_name" name="full_name" placeholder="Jane Doe" required>
@@ -109,8 +132,7 @@
   <input type="email" id="email_addr" name="email_addr" required>
 
   <label>Repeat email address:</label>
-  <input type="email" id="email_addr_repeat" name="email_addr_repeat" required 
-   oninput="check(this)">
+  <input type="email" id="email_addr_repeat" name="email_addr_repeat" required oninput="check(this)">
 
   <label>Arrival date:</label>
   <input type="date" id="arrival_dt" name="arrival_dt" required>
@@ -126,8 +148,7 @@
   <br><br>
 
   <label>Promo code:</label>
-  <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}" 
-   title="Promo codes consist of 6 alphanumeric characters.">
+  <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}" title="Promo codes consist of 6 alphanumeric characters.">
 
   <input type="submit" value="Request Reservation" /> 
 </form>
@@ -153,7 +174,7 @@ Last name:
 <input type="text" name="last_name" />
 <input type="submit" value="submit" />
 </form>
-
+ -->
 
 <img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations">
 

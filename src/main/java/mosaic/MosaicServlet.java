@@ -33,6 +33,7 @@ import mosaic.palettegenerator.ImageBasedColorPaletteGenerator;
 
 public class MosaicServlet extends HttpServlet {
 
+	// TODO include mosaic generator as sub-module - http://git-scm.com/book/en/Git-Tools-Submodules
 
 	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)

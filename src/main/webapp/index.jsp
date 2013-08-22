@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 
 <html>
@@ -42,7 +43,7 @@
 
 <%--TODO option to disable printing dimensions --%>
 <%-- TODO probably submit to self but as post --%>
-<form class="form-horizontal" method="post" action="getMosaic" id="options">
+<form class="form-horizontal" method="post" action="" id="options">
           <div class="control-group">
             <label class="control-label" for="imgInput">Image URL</label>
             <div class="controls">
@@ -97,7 +98,7 @@
 </form>
             
 
-<form action="html_form_action.asp" method="get">
+<!-- <form action="html_form_action.asp" method="get">
   <label>Image URL:</label>
   <input type="text" id="imgUrl2" name="imgUrl" placeholder="http://www.website.com/myImage.png" required>
   
@@ -108,8 +109,8 @@
   <input id="dimensions2" type="text" placeholder="50,100,200" name="dims">
   
   <label>Dimension to use:</label>
-  <input type="radio" id="dimTypeW2" name="dimType" >Width
-  <input type="radio" id="dimTypeH2" name="dimType" >Height
+  <input type="radio" id="dimTypeW2" name="dimType" value="width">Width
+  <input type="radio" id="dimTypeH2" name="dimType" value="height">Height
   
   <label>Show dimensions on result:</label>
   <input type="checkbox" id="showDim2" name="showDim">
@@ -118,39 +119,11 @@
   <input id="colors2" type="text" placeholder="4,8,16" name="colors">
   
   <input type="submit" value="Submit" /> 
-</form>
+</form> -->
 
-<!-- <form oninput="total.value = (nights.valueAsNumber * 99) + ((guests.valueAsNumber - 1) * 10)">
-
-  <label>Full name:</label>
-  <input type="text" id="full_name" name="full_name" placeholder="Jane Doe" required>
-
-  <label>Email address:</label>
-  <input type="email" id="email_addr" name="email_addr" required>
-
-  <label>Repeat email address:</label>
-  <input type="email" id="email_addr_repeat" name="email_addr_repeat" required oninput="check(this)">
-
-  <label>Promo code:</label>
-  <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}" title="Promo codes consist of 6 alphanumeric characters.">
-
-  <input type="submit" value="Request Reservation" /> 
-</form>
-
-<script>
-function check(input) {
-  if (input.value != document.getElementById('email_addr').value) {
-    input.setCustomValidity('The two email addresses must match.');
-  } else {
-    // input is valid - reset the error message
-    input.setCustomValidity('');
-  }
-}
-</script>
- -->
-
-<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations">
-
+<c:if test=${requestScope.showImg == true}>
+	<img src="mosaic?img=${param.img}" alt="Composite image of mosaics based on color/resolution variations">
+</c:if>
 
 <!-- 
 <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>

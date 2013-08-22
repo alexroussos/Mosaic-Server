@@ -100,6 +100,11 @@
             
 
 <form action="html_form_action.asp" method="get">
+  <label for="dimensions">Enter the number of units wide or tall to use in each variation</label>
+  <input id="dimensions2" type="text" placeholder="50,100,200">
+ 
+  <label for="colors">Enter the number of colors to use in each variation</label>
+  <input id="colors2" type="text" placeholder="4,8,16">
 
   <label>Image URL:</label>
   <input type="text" id="imgUrl" name="imgUrl" placeholder="http://www.website.com/myImage.png" required>
@@ -113,12 +118,6 @@
   
   <label>Show dimensions on result:</label>
   <input type="checkbox" id="showDim2">
-
-  <label for="dimensions">Enter the number of units wide or tall to use in each variation</label>
-  <input id="dimensions2" type="text" placeholder="50,100,200">
- 
-  <label for="colors">Enter the number of colors to use in each variation</label>
-  <input id="colors2" type="text" placeholder="4,8,16">
 
   <input type="submit" value="Submit" /> 
 </form>

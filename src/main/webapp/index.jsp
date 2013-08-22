@@ -82,16 +82,16 @@
               </label>
             </div>
           </div>
-          <!-- 
+          
           <script language="JavaScript">
 			function submitForm() {
 			  document.forms['options'].do.value = "checkstatus";
 			  document.forms['options'].submit();
 			}
-	      </script> -->
+	      </script>
           
           <div class="form-actions">
-            <input class="btn btn-primary" type="submit"><!--  onClick="submitForm();"> -->	
+            <input class="btn btn-primary" type="submit" onClick="submitForm();">
             <input class="btn" type="reset">
           </div>
         </fieldset>

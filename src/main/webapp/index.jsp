@@ -47,12 +47,12 @@
             </div>
           </div>
           
-<!--           <div class="control-group">
+          <div class="control-group">
             <label class="control-label" for="fileInput">Or upload an image</label>
             <div class="controls">
               <input class="input-file" id="fileInput" type="file">
             </div>
-          </div> -->
+          </div>
 		  
           <label class="control-label" for="dimensionType">Choose dimension to use</label>
 		  <label class="radio">

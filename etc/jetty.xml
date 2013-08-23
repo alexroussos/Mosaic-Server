@@ -12,7 +12,7 @@
 	<Configure class="org.eclipse.jetty.webapp.WebAppContext">
 	  <Set name="defaultsDescriptor">etc/webdefault.xml</Set>
 	</Configure>
-	
+	test if this is being read
 	<Call name="addContext">
 	  <Call name="setMimeMapping >
 	    <Arg>css</Arg>

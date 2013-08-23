@@ -6,11 +6,10 @@
 -->
  
  <!-- TODO is this getting read? -->
-<!-- <Configure id="Server" class="org.eclipse.jetty.server.Server">
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
 
-	 TODO does this go inside Server?
+<!-- 	 TODO does this go inside Server?-->	
 	<Configure class="org.eclipse.jetty.webapp.WebAppContext">
-	  Set up the absolute path to the custom webdefault.xml
 	  <Set name="defaultsDescriptor">etc/webdefault.xml</Set>
 	</Configure>
 	
@@ -19,4 +18,4 @@
 	    <Arg>css</Arg>
 	    <Arg>text/css</Arg>
     </Call>
-</Configure> -->
+</Configure>

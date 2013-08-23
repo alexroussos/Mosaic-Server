@@ -4,9 +4,9 @@
  
 <!-- http://www.eclipse.org/jetty/documentation/current/webdefault-xml.html -->
 	 
-<!-- <Configure class="org.eclipse.jetty.webapp.WebAppContext">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
   <mime-mapping> 
     <extension>css</extension>
     <mime-type>text/css</mime-type>
   </mime-mapping>
-</Configure> -->
+</Configure>

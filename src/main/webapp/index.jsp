@@ -9,6 +9,7 @@
   <meta charset="utf-8">
   <title>Mosaic Generator</title>
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/mosaic.css" rel="stylesheet" media="screen">
 </head>
 
 <body>

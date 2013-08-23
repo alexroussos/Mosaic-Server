@@ -29,6 +29,7 @@ public class Main {
         WebAppContext root = new WebAppContext();
 
         root.setContextPath("/");
+        root.setDefaultsDescriptor("etc/webdefault.xml");
         root.setDescriptor(webappDirLocation+"/WEB-INF/web.xml");
         root.setResourceBase(webappDirLocation);
         

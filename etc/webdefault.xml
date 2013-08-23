@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+ 
+ 
+<!-- http://www.eclipse.org/jetty/documentation/current/webdefault-xml.html -->
+	 
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+  <mime-mapping> 
+    <extension>css</extension>
+    <mime-type>text/css</mime-type>
+  </mime-mapping>
+</Configure>

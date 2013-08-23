@@ -29,7 +29,8 @@ public class Main {
         WebAppContext root = new WebAppContext();
         root.getMimeTypes().addMimeMapping("css", "text/css");
         root.setContextPath("/");
-        root.setDefaultsDescriptor("etc/webdefault.xml");
+        // TODO enabling this breaks things. see if can load jetty.xml instead
+//        root.setDefaultsDescriptor("etc/webdefault.xml");
         root.setDescriptor(webappDirLocation+"/WEB-INF/web.xml");
         root.setResourceBase(webappDirLocation);
         

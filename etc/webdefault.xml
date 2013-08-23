@@ -4,6 +4,7 @@
  
 <!-- http://www.eclipse.org/jetty/documentation/current/webdefault-xml.html -->
 	 
+	 <!--  TODO this breaks things if enabled. Maybe supposed to be inside <web-app> -->
 <Configure class="org.eclipse.jetty.webapp.WebAppContext">
   <mime-mapping> 
     <extension>css</extension>

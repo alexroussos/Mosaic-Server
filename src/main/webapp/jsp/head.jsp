@@ -7,5 +7,6 @@
   <title>Mosaic Generator</title>
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" >
   <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" >
+  <link href="font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" >
   <link href="css/mosaic.css" type="text/css" rel="stylesheet" >
   <!-- end head.jsp -->

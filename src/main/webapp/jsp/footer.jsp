@@ -17,4 +17,8 @@
       <h5>Copyright 2013, all rights reserved, etc.</h5>
     </div>
   </footer>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/mosaic.js"></script>
   <!-- end footer.jsp -->

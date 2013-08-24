@@ -37,5 +37,10 @@
     <servlet-name>mosaic</servlet-name>
     <url-pattern>/mosaic</url-pattern>
   </servlet-mapping>
+  
+  <mime-mapping>
+  	<extension>css</extension>
+  	<mime-type>text/css</mime-type>
+  </mime-mapping>
 
 </web-app>

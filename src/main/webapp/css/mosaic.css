@@ -8,6 +8,23 @@
   padding-bottom: 70px; 
 }
 
+.control-group {
+  padding-top: 10px;
+}
+
+.footer {
+  width: 90%;
+  margin: 0 auto;
+  margin-left: 50px;
+  /* don't get overlayed by top/bottom navbar */
+  padding-top: 70px;
+  padding-bottom: 70px; 
+}
+
+.footer > a {
+  padding-left: 10px;
+}
+
 #mosaic {
   min-width: 300px;
   max-width: 500px;

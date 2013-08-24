@@ -16,8 +16,17 @@
 <%-- TODO support choosing palette generator, loading palette from file --%>
 <%--TODO option to disable printing dimensions --%>
 <%--TODO need somewhere to upload imput file to --%>
+<%--TODO go side-by-side options and result --%>
 
-  <form class="form-horizontal" method="post" action="mosaic" "id="options">
+<div class="container">
+  <div class="overview">
+    <h2>Mosaic Generator</h2>
+    <p>Mosaic Generator can take an image and show you what it would look like at various resolutions and with different sets of colors. This is
+    great for designing mosaics, and also for making knitting patterns, icons for websites, t-shirt designs and anything else where you have a limited
+    number of colors available or need to scale an image down in size.</p>
+  </div>
+  <h2>Options</h2>
+  <form method="post" action="mosaic" id="options">
     <div class="control-group">
       <label class="control-label" for="imgUrl">Image URL</label>
       <div class="controls">
@@ -32,25 +41,28 @@
       </div>
     </div>
     
-    <div id="dimTypes">
-      <label class="radio">
-        <input type="radio" name="dimType" id="dimTypeW" value="width" ${empty param.dimType ? 'checked' : (param.dimType == 'width' ? 'checked' : '')}>
-        Width
-      </label>
-      <label class="radio">
-        <input type="radio" name="dimType" id="dimTypeH" value="height" ${param.dimType == 'height' ? 'checked' : ''}>
-        Height		  
-      </label>
+    <div id="control-group">
+      <label class="control-label">Specify dimensions of result in units wide or high</label>
+        <div class="controls">
+          <input type="radio" name="dimType" id="dimTypeW" value="width" ${empty param.dimType ? 'checked' : (param.dimType == 'width' ? 'checked' : '')}>
+          Width
+          <input type="radio" name="dimType" id="dimTypeH" value="height" ${param.dimType == 'height' ? 'checked' : ''}>
+          Height  
+        </div>
     </div>
     
-    <div class="input-append">
+    <div class="control-group">
       <label class="control-label" for="dimensions">Number of units wide or tall to use in each variation</label>
-      <input class="span2" id="dimensions" type="text" placeholder="50,100,200" name="dims"  value="${param.dims}">
+      <div class="controls">
+        <input id="dimensions" type="text" placeholder="50,100,200" name="dims"  value="${param.dims}">
+      </div>
     </div>
   
-    <div class="input-append">
+    <div class="control-group">
    	  <label class="control-label" for="colors">Number of colors to use in each variation</label>
-      <input class="span2" id="colors" type="text" placeholder="4,8,16" name="colors" value="${param.colors}">
+      <div class="controls">
+        <input id="colors" type="text" placeholder="4,8,16" name="colors" value="${param.colors}">
+      </div>
     </div>    
     
     <div class="control-group">
@@ -63,7 +75,7 @@
       </div>
     </div>
     
-    <div class="form-actions">
+    <div class="control-group">
       <input class="btn btn-primary" type="submit" >
       <input class="btn" type="reset">
     </div>
@@ -71,8 +83,14 @@
 
   <%-- TODO better way to forward params - put in request context? - or just pass entire query string --%>
   <c:if test="${requestScope.showImg == true}">
-  	<img src="generate?imgUrl=${param.imgUrl}&dims=${param.dims}&colors=${param.colors}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">
+    <div class="mosaic">
+      <h2>Here's your result</h2>
+      <p>Your result may have been been stretched or squeezed to make it easier to view on this page; to view it at it's true resolution, right-click it and open it in a new tab.</p>
+  	 <img src="generate?imgUrl=${param.imgUrl}&dims=${param.dims}&colors=${param.colors}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">
+    </div>
   </c:if>
+  
+</div> <!-- container -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

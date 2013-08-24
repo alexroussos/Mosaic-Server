@@ -9,7 +9,7 @@
   <title>404</title>
 </head>
 <body>
-  <jsp:include page="jsp/header.jsp" />
+  <jsp:include page="header.jsp" />
   <p>The page you requested does not exist.</p>
   <jsp:include page="footer.jsp" /> 
 </body>

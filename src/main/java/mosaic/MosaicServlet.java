@@ -40,7 +40,7 @@ public class MosaicServlet extends HttpServlet {
             throws ServletException, IOException {
         String imgUrl = req.getParameter("imgUrl");
         
-        System.out.println("Got image " + imgUrl);
+        System.out.println("MosaicServlet: Got image " + imgUrl);
         
         MosaicGenerator mosaicGenerator = new MosaicGenerator();
         BufferedImage rawImage = ImageIO.read(new URL(imgUrl));

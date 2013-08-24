@@ -6,7 +6,7 @@
     version="2.5">
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
     
     <error-page>
@@ -17,12 +17,12 @@
     <!--  TODO tag libs http://docs.oracle.com/cd/E11035_01/wls100/webapp/configurejsp.html -->
 
   <servlet>
-    <servlet-name>home</servlet-name>
+    <servlet-name>mosaic</servlet-name>
     <servlet-class>mosaic.HomeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>home</servlet-name>
-    <url-pattern>/</url-pattern>
+    <servlet-name>mosaic</servlet-name>
+    <url-pattern>/mosaic</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -35,12 +35,12 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>mosaic</servlet-name>
+    <servlet-name>generate</servlet-name>
     <servlet-class>mosaic.MosaicServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>mosaic</servlet-name>
-    <url-pattern>/mosaic</url-pattern>
+    <servlet-name>generate</servlet-name>
+    <url-pattern>/generate</url-pattern>
   </servlet-mapping>
   
   <mime-mapping>

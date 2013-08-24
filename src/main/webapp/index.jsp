@@ -17,7 +17,6 @@
 <%--TODO option to disable printing dimensions --%>
 <%--TODO need somewhere to upload imput file to --%>
 
-  <form class="form-horizontal" method="post" action="/" id="options">
     <div class="control-group">
       <label class="control-label" for="imgUrl">Image URL</label>
       <div class="controls">
@@ -71,7 +70,7 @@
 
   <%-- TODO better way to forward params - put in request context? - or just pass entire query string --%>
   <c:if test="${requestScope.showImg == true}">
-  	<img src="mosaic?imgUrl=${param.imgUrl}&dims=${param.dims}&colors=${param.colors}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">
+  	<img src="generate?imgUrl=${param.imgUrl}&dims=${param.dims}&colors=${param.colors}" id="mosaic" alt="Composite image of mosaics based on color/resolution variations">
   </c:if>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

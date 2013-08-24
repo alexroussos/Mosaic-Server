@@ -17,6 +17,7 @@
 <%--TODO option to disable printing dimensions --%>
 <%--TODO need somewhere to upload imput file to --%>
 
+  <form class="form-horizontal" method="post" action="mosaic" "id="options">
     <div class="control-group">
       <label class="control-label" for="imgUrl">Image URL</label>
       <div class="controls">

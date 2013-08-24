@@ -9,6 +9,11 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     
+    <error-page>
+	  <error-code>404</error-code>
+	  <location>/jsp/404.jsp</location>
+	</error-page>
+    
     <!--  TODO tag libs http://docs.oracle.com/cd/E11035_01/wls100/webapp/configurejsp.html -->
 
   <servlet>

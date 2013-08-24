@@ -20,14 +20,14 @@ public class HomeServlet extends HttpServlet {
 
 	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("HomeServlet: got GET with " + req.getParameterNames());
+		System.out.println("HomeServlet: got GET with " + req.getRequestURL() + "?" + req.getQueryString());
 		req.setAttribute("showImg", "false");
 		req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 
 	@Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("HomeServlet: got POST with " + req.getParameterNames());
+		System.out.println("HomeServlet: got POST with " + req.getRequestURL() + "?" + req.getQueryString());
 		req.setAttribute("showImg", "true");
 		req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }

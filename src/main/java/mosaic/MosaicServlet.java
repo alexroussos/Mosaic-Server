@@ -1,13 +1,8 @@
 package mosaic;
 
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,16 +12,10 @@ import java.util.logging.Logger;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.imageio.ImageIO;
-import javax.net.ssl.HttpsURLConnection;
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import mosaic.*;
 import mosaic.palettegenerator.ImageBasedColorPaletteGenerator;
@@ -40,7 +29,13 @@ public class MosaicServlet extends HttpServlet {
             throws ServletException, IOException {
         String imgUrl = req.getParameter("imgUrl");
         
-        System.out.println("MosaicServlet: Got image " + imgUrl);
+        /*
+         * Here's a URL that was breaking things -- encoding spaces fixes most but eventually do something more complete.
+         *  http://4.bp.blogspot.com/-If90I32Opu8/UTSRyKKi3OI/AAAAAAAAE8U/chZ2iWNNF7M/s1600/plaid+mash+stamp+ciate+fade+to+greige+china+glaze+split+perso-nail-ity.JPG?blah blah=3 4
+         */
+        imgUrl = imgUrl.replaceAll(" ", "%20"); 
+        
+        System.out.println("MosaicServlet: Got image " + imgUrl); // TODO real logging
         
         MosaicGenerator mosaicGenerator = new MosaicGenerator();
         BufferedImage rawImage = ImageIO.read(new URL(imgUrl));
@@ -72,34 +67,6 @@ public class MosaicServlet extends HttpServlet {
         resp.getOutputStream().write(imageBytes);
     }
 	
-    public void displayImage(HttpServletResponse resp) throws Exception {
-        
-        //GET IMAGE FULL PATH.
-        ServletContext sc       = getServletContext();
-        String         filename = sc.getRealPath("test.jpg");
-        
-        //GET IMAGE MIME TYPE.
-        String mimeType = "image/jpeg";
-        
-        //SET CONTENT TYPE.
-        resp.setContentType(mimeType);
-        
-        //SET CONTENT SIZE.
-        File file = new File(filename);
-        resp.setContentLength((int)file.length());
-        
-        //OPEN IMAGE & OUTPUT STREAM.
-        FileInputStream in  = new FileInputStream(file);
-        OutputStream    out = resp.getOutputStream();
-        
-        //COPY IMAGE TO OUTPUT STREAM.
-        byte[]  buf   = new byte[1024];
-        int     count = 0;
-        while ((count = in.read(buf)) >= 0) {
-          out.write(buf, 0, count);
-        }  
-      }
-    
     private static List<Integer> getArgAsList(String args) {
     	List<Integer> list = new ArrayList<Integer>();
     	for (String arg : args.split(",")) {

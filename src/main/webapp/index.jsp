@@ -79,7 +79,7 @@
       
       <div class="control-group">
         <input class="btn btn-primary" type="submit" >
-        <input class="btn" type="reset">
+        <input class="btn" type="reset"> <!--  TODO sets back to what it was WHEN PAGE LOADED -->
       </div>
     </form>
   </div> <!-- options -->

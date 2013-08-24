@@ -10,7 +10,9 @@
 </head>
 <body>
   <jsp:include page="header.jsp" />
-  <p>The page you requested does not exist.</p>
+  <div class="container">
+    <h2>The page you requested does not exist.</h2>
+  </div>
   <jsp:include page="footer.jsp" /> 
 </body>
 </html>

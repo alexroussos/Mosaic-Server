@@ -1,6 +1,6 @@
-# Embedded Jetty template application 
+# Mosaic Server
 
-This is a template for a web application that uses embedded Jetty. The sample code consists of a JSP (this page) and a simple servlet.
+A web interface for my [Mosaic Generator project][] which is powered by Jetty running on Heroku. You can view the web app [here][].
 
 ## Running the application locally
 
@@ -12,3 +12,5 @@ Then run it with:
 
     $java -cp target/classes:target/dependency/* com.example.Main
 
+[Mosaic Generator project]: https://github.com/alexroussos/Mosaic
+[here]: http://mosaic-server.herokuapp.com/

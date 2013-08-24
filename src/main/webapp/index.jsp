@@ -8,9 +8,9 @@
   <meta name="author" content="Alex Roussos">
   <meta charset="utf-8">
   <title>Mosaic Generator</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-  <link href="css/mosaic.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap.min.css" type="css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap-theme.min.css" type="css" rel="stylesheet" media="screen">
+  <link href="css/mosaic.css" type="css" rel="stylesheet" media="screen">
 </head>
 
 <body>

@@ -26,9 +26,9 @@
 <%-- TODO probably submit to self but as post --%>
 <%--TODO need somewhere to upload imput file to --%>
 
-  <form class="form-horizontal" method="post" action="" id="options">
+  <form class="form-horizontal" method="post" action="/" id="options">
     <div class="control-group">
-      <label class="control-label" for="imgInput">Image URL</label>
+      <label class="control-label" for="imgUrl">Image URL</label>
       <div class="controls">
         <input type="text" class="input-xlarge" id="imgUrl" name="imgUrl" value="${param.imgUrl}">
       </div>
@@ -37,7 +37,7 @@
     <div class="control-group">
       <label class="control-label" for="fileInput">Or upload an image [not supported yet]</label>
       <div class="controls">
-        <input class="input-file" id="fileInput" type="file" name="imgFile" value="${param.imgFile}" accept="image/*">
+        <input class="input-file" id="fileInput" type="file" name="imgFile" src="${param.imgFile}" accept="image/*">
       </div>
     </div>
     
